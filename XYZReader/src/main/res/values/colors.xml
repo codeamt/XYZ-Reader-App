@@ -18,9 +18,9 @@
 <resources>
 
     <!--Primary Colors -->
-    <color name="primary">#009688</color>
+    <color name="primary">#000</color>
     <color name="primaryDark">#00695C</color>
-    <color name="primaryLight">#4DB6AC</color>
+    <color name="primaryLight">#111</color>
 
     <!-- Detail Activity Colors -->
     <color name="detail_title">#FFF</color>
