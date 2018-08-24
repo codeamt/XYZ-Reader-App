@@ -8,9 +8,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.RequiresApi;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.SharedElementCallback;
@@ -57,6 +61,7 @@ public class ArticleListActivity extends AppCompatActivity implements
     private RecyclerView mRecyclerView;
     private Bundle mTmpReturnState;
     private boolean mIsRefreshing = false;
+    private CoordinatorLayout mLayout;
 
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
     // Use default locale format
@@ -107,7 +112,13 @@ public class ArticleListActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_article_list);
 
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
+        if(getSupportActionBar()!= null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
+        mToolbar.setTitle("");
+        mLayout = (CoordinatorLayout) findViewById(R.id.mainLayout);
 
         final View toolbarContainerView = findViewById(R.id.toolbar_container);
 
@@ -165,7 +176,16 @@ public class ArticleListActivity extends AppCompatActivity implements
         public void onReceive(Context context, Intent intent) {
             if (UpdaterService.BROADCAST_ACTION_STATE_CHANGE.equals(intent.getAction())) {
                 mIsRefreshing = intent.getBooleanExtra(UpdaterService.EXTRA_REFRESHING, false);
-                updateRefreshingUI();
+                Snackbar snackbar;
+                snackbar = Snackbar.make(mLayout, "Data is loading, please wait...", Snackbar.LENGTH_LONG);
+                snackbar.show();
+                snackbar.setAction("Got It.", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        updateRefreshingUI();
+                    }
+                });
+                snackbar.setActionTextColor(Color.WHITE);
             }
         }
     };
