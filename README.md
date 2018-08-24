@@ -30,22 +30,24 @@ For the sixth project of the Grow With Google Developer Scholarship Program (and
 
 ## Versioning and Dependencies 
 
-<b>Target SDK Version:</b> 25
-<b>Minimum SDK Version:</b> 19
+<b>Target SDK Version:</b> 27
+<b>Minimum SDK Version:</b> 21
 
 <b>Libraries: </b>
-- com.android.support:support-v4:+
-- com.android.support:support-v13:+
-- com.android.support:appcompat-v7:+ 
-- com.android.support:palette-v7:+
-- com.android.support:recyclerview-v7:+
-- com.android.support:cardview-v7:+
-- com.squareup.okhttp3:okhttp:3.1.2
+- com.android.support:design:27.1.1
+- com.android.support:support-v4:27.1.1
+- com.android.support:support-v13:27.1.1
+- com.android.support:appcompat-v7:27.1.1 
+- com.android.support:palette-v7:27.1.1
+- com.android.support:recyclerview-v7:27.1.1
+- com.android.support:cardview-v7:27.1.1
+- com.squareup.okhttp3:okhttp:3.10.0
 - libs/volley.jar
 
-<b>App Repositories: </b>
+<b>App/Build Repositories: </b>
 
 - MavenCentral 
 - jCenter
+- Google
 
 <b>Android Studio Version:</b> 3.1.2 (Stable Release)
