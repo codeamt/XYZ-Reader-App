@@ -10,6 +10,10 @@ For the sixth project of the Grow With Google Developer Scholarship Program (and
 ## Learning Objectives
 
 - [x] <b>Understand the fundamentals of Android Design</b>
+<p align="center">
+  <img src="https://ucarecdn.com/cc0ab7fa-80e3-4d2a-bd93-35227eac651c/" width="30%" height="50%" >
+</p>
+
 - [x] <b>Apply Material Design guidelines a mobile application </b>
   
 <p align="center">
