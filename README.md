@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://sites.google.com/udacity.com/gwgdevscholarship/home">#GrowWithGoogle</a> Android Development Project: <br>XYZ Reader App</h1>
+<h1 align="center">XYZ Reader App</h1>
 
 For the sixth project of the Grow With Google Developer Scholarship Program (and conjointly Udacity’s Android Development Nanodegree program), students were asked to take in user feedback and re-design a reader app (written in Java) that implements Material Design principles.
 
